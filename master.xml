@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Master Suite">
+	
+	<!-- add this for the extent reports below code -->
+	<listeners>
+		<listener class-name="utilites.Extentreport"/>
+	</listeners>
+
+<!-- remember ( for me ) always change the test name of the or else it wont run-->
+  <test thread-count="5" name="Login Test">
+  
+  <!-- add the browser and operating system-->
+  <parameter name="os" value="windows"/>
+  <parameter name="browser" value="chrome"/>
+  
+    <classes>
+      <class name="testCase.TC001_LoginTest"/>
+    	<!--<class name="testCase.LoginDDT"/>-->
+    </classes>
+  </test> 
+</suite> 
